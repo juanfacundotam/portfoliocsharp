@@ -15,11 +15,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var persona = new Persona(){
-            Name = "Juan Facundo Tam",
-            Career = "FullStack Developer"
-        };
-        return View("index", persona);
+        // var persona = new Persona(){
+        //     Name = "Juan Facundo Tam",
+        //     Career = "FullStack Developer"
+        // };
+        // return View("index", persona);
+        return View();
     }
 
     public IActionResult Privacy()
