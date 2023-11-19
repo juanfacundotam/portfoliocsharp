@@ -1,8 +1,26 @@
-﻿@{
+﻿@model Persona
+@{
     ViewData["Title"] = "Home Page";
+
+    string ConvertirMayusculas(string valor)
+    {
+        return valor.ToUpper() + "Adición";
+    }
+
+    DateTime hoy = DateTime.Now;
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @* <h1 class="display-4">@Model.Name.ToLower()</h1> *@
+    <p style="font-size: 10px;">@hoy.ToString("dd/MM/yyyy hh:mm:ss tt")</p>
+    <h1 class="display-4">@ConvertirMayusculas(Model.Name)</h1>
+    <h1 class="display-4">@Model.Name</h1>
+    @if(Model.Career == "FullStack Developer") {
+        <h1>😊</h1>
+    } else {
+       <h1>😒</h1>
+    }
+
+    <h2>@Model.Career</h2>
+    <img id="foto" src="~/imagenes/foto.png" alt="Foto personal">
 </div>
