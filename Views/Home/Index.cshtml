@@ -1,26 +1,34 @@
-﻿@model Persona
+﻿@* @model Persona *@
 @{
     ViewData["Title"] = "Home Page";
 
-    string ConvertirMayusculas(string valor)
+    @* string ConvertirMayusculas(string valor)
     {
         return valor.ToUpper() + "Adición";
     }
 
     DateTime hoy = DateTime.Now;
-}
+
+    var nombres = new List<string>() { "Juan", "Facundo", "Tam"};
+} *@
 
 <div class="text-center">
     @* <h1 class="display-4">@Model.Name.ToLower()</h1> *@
-    <p style="font-size: 10px;">@hoy.ToString("dd/MM/yyyy hh:mm:ss tt")</p>
+    @* <p style="font-size: 10px;">@hoy.ToString("dd/MM/yyyy hh:mm:ss tt")</p>
+    <ul>@foreach (var nombre in nombres) {
+        <li>@nombre</li>
+        }
+    </ul>
     <h1 class="display-4">@ConvertirMayusculas(Model.Name)</h1>
     <h1 class="display-4">@Model.Name</h1>
     @if(Model.Career == "FullStack Developer") {
         <h1>😊</h1>
     } else {
        <h1>😒</h1>
-    }
+    } *@
+    @* <h2>@Model.Career</h2> *@
 
-    <h2>@Model.Career</h2>
+    <h1>Juan Facundo Tam</h1>
+    <h2>FullStack Developer</h2>
     <img id="foto" src="~/imagenes/foto.png" alt="Foto personal">
 </div>
