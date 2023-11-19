@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj",
+        "projectName": "portfolioC#",
+        "projectPath": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj",
+        "packagesPath": "C:\\Users\\Facundo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Facundo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.417\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
