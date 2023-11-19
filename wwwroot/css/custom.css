@@ -3,3 +3,29 @@
     margin: 2rem 0;
     border-radius: 50%;
 }
+
+.container-header {
+    background-color: rgba(0, 0, 0, 0.927);
+    color: white;
+}
+
+.container-sobremi {
+    background-color: rgba(0, 0, 0, 0.834);
+    color: white;
+
+}
+.seccion-sobremi{
+    margin: 40px;
+
+
+}
+.container-skills {
+    background-color: rgba(0, 0, 0, 0.927);
+    color: white;
+
+}
+.seccion-skills{
+    margin: 40px;
+
+
+}
