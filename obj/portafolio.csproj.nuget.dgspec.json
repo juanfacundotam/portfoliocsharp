@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj": {}
+    "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\portafolio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj": {
+    "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\portafolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj",
-        "projectName": "portfolioC#",
-        "projectPath": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portfolioC#.csproj",
+        "projectUniqueName": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\portafolio.csproj",
+        "projectName": "portafolio",
+        "projectPath": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\portafolio.csproj",
         "packagesPath": "C:\\Users\\Facundo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\obj\\",
+        "outputPath": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Facundo\\AppData\\Roaming\\NuGet\\NuGet.Config"
