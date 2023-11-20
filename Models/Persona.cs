@@ -1,4 +1,4 @@
-namespace portafolio.Models
+namespace Portfolio.Models
 {
     public class Persona
     {
