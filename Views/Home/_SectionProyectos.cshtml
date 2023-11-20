@@ -1,0 +1,32 @@
+@* @model Portfolio.Models.HomeIndexViewModel *@
+@model IEnumerable<Proyecto>
+
+@if (Model is not null)
+{
+
+    <div class="text-center " style="padding-top: 6rem ;">
+        <h1>Proyectos</h1>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var proyecto in Model)
+            {
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="@proyecto.Image" alt="@proyecto.ImageAlt" class="card-img-top">
+                        <div class="card-body ">
+                            <h5 class="card-title text-dark">@proyecto.Title</h5>
+                            <p class="card-text text-dark">@proyecto.Description</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="@proyecto.Link" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Web
+                                Site</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+}
