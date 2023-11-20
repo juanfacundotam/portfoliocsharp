@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XuhsfH1ndMii87RsA4AlDG6q/1ao7C86LpIN3ihx150=",
+  "Hash": "SI13Dqik8kzkrZ/4ebBkxrdLYFeNiUGsa9H4nWuZzPI=",
   "Source": "portafolio",
   "BasePath": "_content/portafolio",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\wwwroot\\icons\\dotnet.svg",
+      "SourceId": "portafolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\wwwroot\\",
+      "BasePath": "_content/portafolio",
+      "RelativePath": "icons/dotnet.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icons\\dotnet.svg"
     },
     {
       "Identity": "C:\\Users\\Facundo\\Documents\\04 Repositorios\\portfolioC#\\portafolio\\wwwroot\\imagenes\\foto.png",
