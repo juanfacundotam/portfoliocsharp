@@ -1,7 +1,7 @@
-﻿@* @model Persona *@
+﻿@model HomeIndexViewModel
+
 @{
     ViewData["Title"] = "Home Page";
-
     @* string ConvertirMayusculas(string valor)
 {
 return valor.ToUpper() + "Adición";
@@ -17,3 +17,5 @@ var nombres = new List<string>() { "Juan", "Facundo", "Tam"};
 <partial name="_Presentacion" />
 
 <partial name="_Habilidades">
+
+<partial name="_SectionProyectos" model="Model.Proyectos" />
