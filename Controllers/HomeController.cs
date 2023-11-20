@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using portafolio.Models;
+using Portfolio.Models;
 
 namespace portafolio.Controllers;
 
@@ -27,6 +28,22 @@ public class HomeController : Controller
     {
         return View();
     }
+
+private List<Proyecto> ObtenerProyectos()
+{
+    return new List<Proyecto>() {
+        new Proyecto
+        {
+            Id = 1,
+            Title = "Spotify Clone",
+            Description = "EN CONSTRUCCION - App clon de Spotify desarrollada con Typescript, Angular y Node",
+            Image = "foto7",
+            ImageAlt = "foto proyecto 1",
+            Link = "https://spotify-angular-xi.vercel.app/",
+            TechArray = new string[] { /* tus elementos de HTML aquí */"" }
+        }
+    };
+}
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
