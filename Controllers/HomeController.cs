@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using portafolio.Models;
-using Portfolio.Models;
+// using Portfolio.Models;
 
 namespace portafolio.Controllers;
 
