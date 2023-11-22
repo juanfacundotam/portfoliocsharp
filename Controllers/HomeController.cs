@@ -1,44 +1,46 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging; // Asegúrate de tener esta importación para ILogger
 using portafolio.Models;
 using portafolio.Servicios;
-// using Portfolio.Models;
 
-namespace portafolio.Controllers;
-
-public class HomeController : Controller
+namespace portafolio.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-    private readonly ProyectRepository proyectRepository;
-
-    public HomeController(ILogger<HomeController> logger, ProyectRepository proyectRepository)
+    public class HomeController : Controller
     {
-        _logger = logger;
-        this.proyectRepository = proyectRepository;
-    }
-
-    public IActionResult Index()
-    {
-        // var persona = new Persona(){
-        //     Name = "Juan Facundo Tam",
-        //     Career = "FullStack Developer"
-        // };
-        // return View("index", persona);
-        var proyectRepository = new ProyectRepository();
-       var proyectos = proyectRepository.ObtenerProyectos().Take(3).ToList();
-        var modelo = new HomeIndexViewModel() { Proyectos = proyectos };
-        return View(modelo);
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+        private readonly ILogger<HomeController> _logger;
+        private readonly ProyectRepository _proyectRepository;
 
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public HomeController(
+            ILogger<HomeController> logger,
+            ProyectRepository proyectRepository)
+        {
+            _logger = logger;
+            _proyectRepository = proyectRepository;
+        }
+
+        public IActionResult Index()
+        {
+            _logger.LogInformation("Este es un mensaje de log");
+            var proyectos = _proyectRepository.ObtenerProyectos().Take(3).ToList();
+
+ 
+
+            var modelo = new HomeIndexViewModel() { Proyectos = proyectos };
+            return View(modelo);
+        }
+
+        public IActionResult Proyectos()
+        {
+            var proyectos = _proyectRepository.ObtenerProyectos();
+            return View(proyectos);
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }
