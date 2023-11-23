@@ -5,12 +5,12 @@
 }
 
 .container-header {
-    background-color: rgba(0, 0, 0, 0.927);
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 
 .container-sobremi {
-    background-color: rgba(0, 0, 0, 0.834);
+    background-color: rgb(0, 0, 0);
     color: white;
 
 }
@@ -20,7 +20,7 @@
 
 }
 .container-skills {
-    background-color: rgba(0, 0, 0, 0.927);
+    background-color: rgb(0, 0, 0);
     color: white;
 
 }
@@ -32,4 +32,10 @@
 
 .iconSkills {
     color: white;
+}
+
+.backSeccion{
+    background-color: #000000;
+    margin: 40px;
+    border-radius: 10px;
 }
