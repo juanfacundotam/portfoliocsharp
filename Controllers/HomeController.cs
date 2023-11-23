@@ -14,7 +14,7 @@ namespace portafolio.Controllers
 
         public HomeController(
             ILogger<HomeController> logger,
-            ProyectRepository proyectRepository)
+            ProyectRepository proyectRepository, IServicioEmail servicioEmail)
         {
             _logger = logger;
             _proyectRepository = proyectRepository;
@@ -35,6 +35,23 @@ namespace portafolio.Controllers
         {
             var proyectos = _proyectRepository.ObtenerProyectos();
             return View(proyectos);
+        }
+
+        [HttpGet] //En realidad todas son Get por eso no se suele poner, porque viene por defecto
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
+        [HttpPost] // si es otro si se pone
+        public async Task<ActionResult> Contacto(ContactoViewModel contactoViewModel)
+        {
+            await servicioEmail.Enviar(contactoViewModel);
+            return RedirectToAction("Gracias");
+        }
+        public IActionResult Gracias()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
