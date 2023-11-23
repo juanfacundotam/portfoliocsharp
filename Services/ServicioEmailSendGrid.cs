@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.Net;
+using System.Net.Mail;
 using portafolio.Models;
 
 namespace portafolio.Servicios
@@ -7,7 +9,7 @@ namespace portafolio.Servicios
     {
         Task Enviar(ContactoViewModel contacto);
     }
-    public class ServicioEmailSendGrid
+    public class ServicioEmailSendGrid: IServicioEmail
     {
         private readonly IConfiguration configuration;
 
@@ -22,14 +24,24 @@ namespace portafolio.Servicios
             var email = configuration.GetValue<string>("SENDGRID_FROM");
             var nombre = configuration.GetValue<string>("SENDGRID_NOMBRE");
 
-            var cliente = new SendGridClient(apiKey);
-            var from = new EmailAddress(email, nombre);
-            var subject = $"El cliente {contacto.Email} quiere contactarte";
-            var to = new EmailAddress(email, nombre); // porque es a nosotros mismos.
-            var mensajeTextoPlano = contacto.Mensaje;
-            var contenidoHtml = @$"De: {contacto.Nombre} - Email: {contacto.Email} - Mensaje: {contacto.Mensaje}";
-            var singleEmail = MailHelper.CreateSingleEmail(from, to, subject, mensajeTextoPlano, contenidoHtml);
-            var respuesta = await cliente.SendGridClient(singleEmail);
+            // var cliente = new SendGridClient(apiKey);
+            // var from = new EmailAddress(email, nombre);
+            // var subject = $"El cliente {contacto.Email} quiere contactarte";
+            // var to = new EmailAddress(email, nombre); // porque es a nosotros mismos.
+            // var mensajeTextoPlano = contacto.Mensaje;
+            // var contenidoHtml = @$"De: {contacto.Nombre} - Email: {contacto.Email} - Mensaje: {contacto.Mensaje}";
+            // var singleEmail = MailHelper.CreateSingleEmail(from, to, subject, mensajeTextoPlano, contenidoHtml);
+            // var respuesta = await cliente.SendGridClient(singleEmail);
+        }
+    }
+
+    internal class SendGridClient
+    {
+        private string apiKey;
+
+        public SendGridClient(string apiKey)
+        {
+            this.apiKey = apiKey;
         }
     }
 }
