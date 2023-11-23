@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IProyectRepository, ProyectRepository>();
 builder.Services.AddScoped<ProyectRepository>();
+builder.Services.AddTransient<IServicioEmail, ServicioEmailSendGrid>();
 
 
 var app = builder.Build();
