@@ -10,7 +10,7 @@ namespace portafolio.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ProyectRepository _proyectRepository;
-
+        private readonly IServicioEmail servicioEmail;
 
         public HomeController(
             ILogger<HomeController> logger,
@@ -18,6 +18,7 @@ namespace portafolio.Controllers
         {
             _logger = logger;
             _proyectRepository = proyectRepository;
+            this.servicioEmail = servicioEmail;
         }
 
         public IActionResult Index()
